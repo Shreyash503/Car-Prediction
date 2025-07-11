@@ -37,7 +37,7 @@ FuelType=0 if FuelType == 'Petrol' else 1
 # Predict button
 if st.button('Predict'): 
     # Load the model
-    model = pickle.load(open('carmodel.pkl', 'rb'))
+    model = pickle.load(open('car_model.pkl', 'rb'))
     # Make predictions
     yp = model.predict([[brand_encoded , Year, kmDriven, Transmission, Owner, FuelType]])
     
